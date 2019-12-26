@@ -1,8 +1,10 @@
 # gubb
+
 gubb is a very minimalistic testing library.
 
 ## Usage
-gubb exports two functions: `test` and `assert`
+
+gubb exports three functions: `test`, `assert` and `runScripts`
 
 Inspired by this tweet by [`@ryanflorence`](https://twitter.com/ryanflorence)
 
