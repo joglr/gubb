@@ -43,7 +43,7 @@ export const assert = (desc, cond, exitFn?) => {
   } else {
     global.console.log(chalk.bold.red('FAIL'), desc);
     const error = new Error(errorObj);
-    const stackLines = error?.stack?.split('\n');
+    const stackLines = error.stack ? error.stack.split('\n') : [];
     const line = stackLines ? stackLines[2] : 'N/A';
     const [, , lineNumber] = line.split(':');
 
