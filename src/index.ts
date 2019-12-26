@@ -1,7 +1,8 @@
 import boxen from 'boxen';
 import chalk from 'chalk';
 import cardinal from 'cardinal';
-import exit from 'exit';
+
+const exit = () => process.exit(1);
 
 export function runTests(r, paths) {
   console.clear();
