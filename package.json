@@ -40,5 +40,18 @@
     "boxen": "^4.2.0",
     "cardinal": "^2.1.1",
     "chalk": "^3.0.0"
-  }
+  },
+  "description": "gubb is a very minimalistic testing library.",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joglr/gubb.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/joglr/gubb/issues"
+  },
+  "homepage": "https://github.com/joglr/gubb#readme"
 }
