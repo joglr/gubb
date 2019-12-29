@@ -99,3 +99,5 @@ function reindent(text) {
     ...rest.map(line => line.substring(indentationToRemove)),
   ].join('\n');
 }
+
+export default { test, assert };
