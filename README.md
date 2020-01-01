@@ -4,20 +4,19 @@ A very minimalistic testing library.
 
 ## Usage
 
-gubb exports two functions: `test` and `assert`.
-They can be used the following ways (see [example](/example/) folder):
+gubb can be used in the following ways (see [example](/example/) folder):
 
 ### [Node (ESM, recommended)](example/esm)
 
 ```javascript
 /* test.js
  *
- * run with `node -r esm test.js`
+ * Run with `node -r esm test.js`
  */
 
 import { test, assert } from 'gubb';
 
-// tests go here
+// Tests go here
 test('my first test', () => {
   assert('that it works', () => true);
 });
@@ -31,7 +30,7 @@ When using the native ES module loader from node, [named exports are not availab
 import * as gubb from 'gubb';
 const { test, assert } = gubb.default;
 
-// tests go here
+// Tests go here
 ```
 
 ### [Node (legacy)](example/node-legacy)
@@ -39,16 +38,20 @@ const { test, assert } = gubb.default;
 ```javascript
 const { test, assert } = require('gubb');
 
-// tests go here
+// Tests go here
 ```
 
 ## API
 
-`test` is used to group assertions into a test, while `assert` is used to make assertions.
+gubb exports two functions: `test` and `assert`.
+
+The `test` function is used to group assertions into a test, while `assert` is used to make assertions.
 
 `test(testName, testFunction)`
 
 `assert(assertionDescription, conditionFunction)`
+
+# Contributing
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
