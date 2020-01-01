@@ -43,7 +43,7 @@ const { test, assert } = require('gubb');
 
 ## API
 
-gubb exports two functions: [`test`](#test) and [`assert`](assert).
+gubb exports two functions: [`test`](#test) and [`assert`](#assert).
 
 ### `test()`
 
