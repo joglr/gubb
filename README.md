@@ -45,11 +45,21 @@ const { test, assert } = require('gubb');
 
 gubb exports two functions: `test` and `assert`.
 
+### test()
+
 The `test` function is used to group assertions into a test, while `assert` is used to make assertions.
 
 `test(testName, testFunction)`
 
-`assert(assertionDescription, conditionFunction)`
+### assert()
+
+`assert` is used to make assertions.
+`assert` takes two parameters: a description and a condition function.
+The condition function is the function that tests your code.
+In here, you add logic that assures that your code runs properly.
+This function should a boolean, whether the test passed. Alternatively, if the function throws an error, the test is considered failed. If you want to throw inside this function, remember to use a `try/catch` block, to prevent the error from failing the whole test.
+
+`assert(description, conditionFunction)`
 
 # Contributing
 
