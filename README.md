@@ -43,15 +43,15 @@ const { test, assert } = require('gubb');
 
 ## API
 
-gubb exports two functions: `test` and `assert`.
+gubb exports two functions: [`test`](#test) and [`assert`](assert).
 
-### test()
+### `test()`
 
 The `test` function is used to group assertions into a test, while `assert` is used to make assertions.
 
 `test(testName, testFunction)`
 
-### assert()
+### `assert()`
 
 `assert` is used to make assertions.
 `assert` takes two parameters: a description and a condition function.
@@ -92,7 +92,3 @@ By default, runs tests related to files changed since the last commit.
 Inspired by this tweet by [`@ryanflorence`](https://twitter.com/ryanflorence)
 
 ![https://twitter.com/ryanflorence/status/1162792430422200320](https://user-images.githubusercontent.com/1959615/70811149-53358280-1dc5-11ea-88e9-1887c09bb9f6.png)
-
-```
-
-```
