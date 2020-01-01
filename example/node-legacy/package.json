@@ -1,0 +1,15 @@
+{
+  "name": "gubb-example-node-legacy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gubb": "./../.."
+  },
+  "scripts": {
+    "test": "npm i && node test.js"
+  },
+  "keywords": [],
+  "author": "Jonas Røssum",
+  "license": "ISC"
+}

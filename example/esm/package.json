@@ -1,0 +1,17 @@
+{
+  "name": "gubb-example-esm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "gubb": "./../.."
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm i && node -r esm test.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Jonas Røssum",
+  "license": "ISC"
+}
