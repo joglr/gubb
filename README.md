@@ -6,7 +6,7 @@ A very minimalistic testing library.
 
 gubb can be used in the following ways (see [example](/example/) folder):
 
-### [Node (ESM, recommended)](example/esm)
+### [Node with ESM](example/esm) (recommended)
 
 ```javascript
 /* test.js
@@ -22,7 +22,7 @@ test('my first test', () => {
 });
 ```
 
-### [Node (with --experimental-modules flag)](example/node)
+### [Node](example/node) with --experimental-modules flag]
 
 When using the native ES module loader from node, [named exports are not available yet](TODO: ADD LINK)
 
@@ -33,7 +33,7 @@ const { test, assert } = gubb.default;
 // Tests go here
 ```
 
-### [Node (legacy)](example/node-legacy)
+### [Node, legacy](example/node-legacy)
 
 ```javascript
 const { test, assert } = require('gubb');
