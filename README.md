@@ -1,14 +1,67 @@
 # gubb
 
-gubb is a very minimalistic testing library.
+A very minimalistic testing library.
 
 ## Usage
 
-gubb exports three functions: `test`, `assert` and `runScripts`
+gubb can be used in the following ways (see [example](/example/) folder):
 
-Inspired by this tweet by [`@ryanflorence`](https://twitter.com/ryanflorence)
+### [Node with ESM](example/esm) (recommended)
 
-![https://twitter.com/ryanflorence/status/1162792430422200320](https://user-images.githubusercontent.com/1959615/70811149-53358280-1dc5-11ea-88e9-1887c09bb9f6.png)
+```javascript
+/* test.js
+ *
+ * Run with `node -r esm test.js`
+ */
+
+import { test, assert } from 'gubb';
+
+// Tests go here
+test('my first test', () => {
+  assert('that it works', () => true);
+});
+```
+
+### [Node](example/node) with --experimental-modules flag]
+
+When using the native ES module loader from node, [named exports are not available yet](TODO: ADD LINK)
+
+```javascript
+import * as gubb from 'gubb';
+const { test, assert } = gubb.default;
+
+// Tests go here
+```
+
+### [Node, legacy](example/node-legacy)
+
+```javascript
+const { test, assert } = require('gubb');
+
+// Tests go here
+```
+
+## API
+
+gubb exports two functions: [`test`](#test) and [`assert`](#assert).
+
+### `test()`
+
+The `test` function is used to group assertions into a test, while `assert` is used to make assertions.
+
+`test(testName, testFunction)`
+
+### `assert()`
+
+`assert` is used to make assertions.
+`assert` takes two parameters: a description and a condition function.
+The condition function is the function that tests your code.
+In here, you add logic that assures that your code runs properly.
+This function should a boolean, whether the test passed. Alternatively, if the function throws an error, the test is considered failed. If you want to throw inside this function, remember to use a `try/catch` block, to prevent the error from failing the whole test.
+
+`assert(description, conditionFunction)`
+
+# Contributing
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
@@ -35,3 +88,7 @@ The package is optimized and bundled with Rollup into multiple formats (CommonJS
 
 Runs the test watcher (Jest) in an interactive mode.
 By default, runs tests related to files changed since the last commit.
+
+Inspired by this tweet by [`@ryanflorence`](https://twitter.com/ryanflorence)
+
+![https://twitter.com/ryanflorence/status/1162792430422200320](https://user-images.githubusercontent.com/1959615/70811149-53358280-1dc5-11ea-88e9-1887c09bb9f6.png)
