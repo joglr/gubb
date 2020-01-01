@@ -1,6 +1,6 @@
 # gubb
 
-gubb is a very minimalistic testing library.
+A very minimalistic testing library.
 
 ## Usage
 
