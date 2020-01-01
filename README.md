@@ -22,7 +22,7 @@ test('my first test', () => {
 });
 ```
 
-### [Node](example/node) with --experimental-modules flag]
+### [Node(example/node) with --experimental-modules flag]
 
 When using the native ES module loader from node, [named exports are not available yet](TODO: ADD LINK)
 
