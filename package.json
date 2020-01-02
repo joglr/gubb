@@ -13,10 +13,9 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "cross-env CI=true tsdx test && npm run test-esm && npm run test-node && npm run test-node-legacy && npm run test-multiple-files",
+    "test": "cross-env CI=true tsdx test && npm run test-esm && npm run test-basic && npm run test-multiple-files",
     "test-esm": "npm run --prefix example/esm test",
-    "test-node": "npm run --prefix example/node test",
-    "test-node-legacy": "npm run --prefix example/node-legacy test",
+    "test-basic": "npm run --prefix example/basic test",
     "test-multiple-files": "npm run --prefix example/multiple-files test",
     "test:watch": "tsdx test --watchAll",
     "lint": "tsdx lint",

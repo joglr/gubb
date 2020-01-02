@@ -1,2 +1,2 @@
-import './test-1.js';
-import './test-2.js';
+require('./test-1.js');
+require('./test-2.js');
