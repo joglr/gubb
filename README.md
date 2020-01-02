@@ -1,6 +1,6 @@
 # gubb &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![npm version](https://img.shields.io/npm/v/gubb.svg?style=flat)](https://www.npmjs.com/package/gubb) [![Actions Status](https://github.com/joglr/gubb/workflows/node-12/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-10/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-8/badge.svg)](https://github.com/joglr/gubb/actions) 
 
-A very minimalistic testing library.
+A very minimalistic Node.js testing library.
 
 ## Installation
 
@@ -14,7 +14,8 @@ npm install gubb --save-dev
 
 gubb can be used in the following ways (see [example](/example/) folder):
 
-### [Node with ESM](example/esm) (recommended)
+### [With ESM](example/esm) (recommended)
+If you use ESM, you can use the named exports like so:
 
 ```javascript
 /* test.js
@@ -32,7 +33,7 @@ test('my first test', () => {
 
 ### [Node](example/node) with --experimental-modules flag
 
-When using the native ES module loader from node, [named exports are not available yet](TODO: ADD LINK)
+When using the native ES module loader from node, [named exports are not available for node<12](TODO: ADD LINK)
 
 ```javascript
 import * as gubb from 'gubb';
