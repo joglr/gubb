@@ -35,7 +35,7 @@ describe('assert', () => {
     expect(conditionMockFn).toHaveBeenCalledWith();
   });
 
-  it.todo('warns if conditions does not return a boolean');
+  it.todo('warns if condition does not return a boolean');
 
   it('passes if condition is true', () => {
     assert('this', () => true);
