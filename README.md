@@ -18,7 +18,7 @@ To get started, add your first test file to the project. A test file is a javasc
 
 #### [With ESM](example/esm) (recommended)
 
-If you use the [`esm`]() package or node version 12 or later, you can import the named exports of gubb like so:
+If you use the [`esm`](https://www.npmjs.com/package/esm) package or node version 12 or later, you can import the named exports of gubb like so:
 
 ```javascript
 import { test, assert } from 'gubb';
