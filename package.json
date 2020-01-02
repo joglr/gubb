@@ -5,6 +5,7 @@
   "author": "Jonas Røssum",
   "main": "dist/index.js",
   "module": "dist/gubb.esm.js",
+  "type": "module",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
@@ -12,12 +13,12 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test && npm run test-esm && npm run test-node && npm run test-node-legacy && npm run test-multiple-files",
+    "test": "cross-env CI=true tsdx test && npm run test-esm && npm run test-node && npm run test-node-legacy && npm run test-multiple-files",
     "test-esm": "npm run --prefix example/esm test",
     "test-node": "npm run --prefix example/node test",
     "test-node-legacy": "npm run --prefix example/node-legacy test",
     "test-multiple-files": "npm run --prefix example/multiple-files test",
-    "test:watch": "tsdx test --watch",
+    "test:watch": "tsdx test --watchAll",
     "lint": "tsdx lint",
     "release": "np",
     "version": "npm run build"
@@ -35,12 +36,12 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.23",
+    "@types/jest": "^24.0.25",
     "husky": "^3.1.0",
     "np": "^5.2.1",
-    "tsdx": "^0.11.0",
+    "tsdx": "^0.12.1",
     "tslib": "^1.10.0",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.4"
   },
   "dependencies": {
     "boxen": "^4.2.0",
