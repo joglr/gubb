@@ -1,14 +1,10 @@
 {
   "name": "gubb-example-multiple-files",
-  "version": "1.0.0",
-  "dependencies": {
-    "gubb": "./../.."
-  },
   "scripts": {
     "test": "npm i && node --experimental-modules test.js"
   },
-  "type": "module",
-  "keywords": [],
-  "author": "Jonas Røssum",
-  "license": "ISC"
+  "dependencies": {
+    "gubb": "./../.."
+  },
+  "type": "module"
 }
