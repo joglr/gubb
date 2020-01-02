@@ -1,6 +1,14 @@
-# gubb &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![npm version](https://img.shields.io/npm/v/gubb.svg?style=flat)](https://www.npmjs.com/package/gubb) [![Actions Status](https://github.com/joglr/gubb/workflows/node-12/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-10/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-8/badge.svg)](https://github.com/joglr/gubb/actions) 
+# gubb &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![npm version](https://img.shields.io/npm/v/gubb.svg?style=flat)](https://www.npmjs.com/package/gubb) [![Actions Status](https://github.com/joglr/gubb/workflows/node-12/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-10/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-8/badge.svg)](https://github.com/joglr/gubb/actions) 
 
 A very minimalistic testing library.
+
+## Installation
+
+Install with npm (or yarn) 
+
+```
+npm install gubb --save-dev
+```
 
 ## Usage
 
@@ -89,6 +97,6 @@ The package is optimized and bundled with Rollup into multiple formats (CommonJS
 Runs the test watcher (Jest) in an interactive mode.
 By default, runs tests related to files changed since the last commit.
 
-Inspired by this tweet by [`@ryanflorence`](https://twitter.com/ryanflorence)
+Inspired by [this tweet](https://twitter.com/ryanflorence/status/1162792430422200320) by [`@ryanflorence`](https://twitter.com/ryanflorence)
 
-![https://twitter.com/ryanflorence/status/1162792430422200320](https://user-images.githubusercontent.com/1959615/70811149-53358280-1dc5-11ea-88e9-1887c09bb9f6.png)
+[https://twitter.com/ryanflorence/status/1162792430422200320](https://user-images.githubusercontent.com/1959615/70811149-53358280-1dc5-11ea-88e9-1887c09bb9f6.png)
