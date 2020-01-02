@@ -1,4 +1,4 @@
-# gubb &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![Actions Status](https://github.com/joglr/gubb/workflows/node-12/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-10/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-8/badge.svg)](https://github.com/joglr/gubb/actions) 
+# gubb &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Actions Status](https://github.com/joglr/gubb/workflows/node-12/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-10/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-8/badge.svg)](https://github.com/joglr/gubb/actions) 
 
 A very minimalistic testing library.
 
