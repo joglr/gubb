@@ -1,4 +1,4 @@
-name: node-10
+name: build
 
 on: [push]
 
