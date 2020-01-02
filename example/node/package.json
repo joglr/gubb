@@ -1,7 +1,7 @@
 {
   "name": "gubb-example-node",
   "scripts": {
-    "test": "npm i && node --experimental-modules test.js"
+    "test": "node --experimental-modules test.js"
   },
   "dependencies": {
     "gubb": "./../.."
