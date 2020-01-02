@@ -7,7 +7,7 @@
     "gubb": "./../.."
   },
   "scripts": {
-    "test": "npm i && node test.js"
+    "test": "node test.js"
   },
   "keywords": [],
   "author": "Jonas Røssum",
