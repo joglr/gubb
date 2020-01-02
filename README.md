@@ -1,35 +1,83 @@
-# gubb &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![npm version](https://img.shields.io/npm/v/gubb.svg?style=flat)](https://www.npmjs.com/package/gubb) [![Actions Status](https://github.com/joglr/gubb/workflows/node-12/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-10/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-8/badge.svg)](https://github.com/joglr/gubb/actions) 
+# gubb &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![npm version](https://img.shields.io/npm/v/gubb.svg?style=flat)](https://www.npmjs.com/package/gubb) [![Actions Status](https://github.com/joglr/gubb/workflows/node-12/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-10/badge.svg)](https://github.com/joglr/gubb/actions) [![Actions Status](https://github.com/joglr/gubb/workflows/node-8/badge.svg)](https://github.com/joglr/gubb/actions)
 
 A very minimalistic Node.js test runner.
 
 ## Installation
 
-Install with npm (or yarn) 
+Install the package with npm (or yarn)
 
 ```
 npm install gubb --save-dev
 ```
 
-## Usage
+## Getting started
 
-gubb can be used in the following ways (see [example](/example/) folder):
+### Defining your tests
 
-### [With ESM](example/esm) (recommended)
-If you use ESM, you can use the named exports like so:
+To get started, add your first test file to the project. A test file is a javascript file, containing calls to [`test`](#test) and `assert`](#assert). In this example, the file [`test.js`](example/esm/test.js) is added to the root of the project.
+
+#### [With ESM](example/esm) (recommended)
+
+If you use the [`esm`]() package or node version 12 or later, you can import the named exports of gubb like so:
 
 ```javascript
-/* test.js
- *
- * Run with `node -r esm test.js`
- */
+import { test, assert } from 'gubb';
+```
 
+Then add your test cases.
+
+```javascript
+// test.js
 import { test, assert } from 'gubb';
 
-// Tests go here
+function myFunction() {
+  return true;
+}
+
 test('my first test', () => {
-  assert('that it works', () => true);
+  const result = myFunction();
+
+  assert('that it returns true', () => {
+    return result === true;
+  });
 });
 ```
+
+### Running your tests
+
+To run your test, add a `test` entry to the scripts section of your `package.json`
+
+```json
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node -r esm test.js"
+  },
+  "devDependencies": {
+    "esm": "*"
+  }
+}
+```
+
+_For node version 12 or later, use this instead:_
+
+```json
+{
+  "name": "my-package",
+
+  ...
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-modules test.js"
+  }
+}
+```
+
+Now you can run your test suite on the commandline or in [CI](https://en.wikipedia.org/wiki/Continuous_integration) with
+
+npm test
 
 ### [Node](example/node) with --experimental-modules flag
 
@@ -42,7 +90,7 @@ const { test, assert } = gubb.default;
 // Tests go here
 ```
 
-### [Node, legacy](example/node-legacy)
+### [Node, legacy](example/node-10)
 
 ```javascript
 const { test, assert } = require('gubb');
@@ -50,13 +98,13 @@ const { test, assert } = require('gubb');
 // Tests go here
 ```
 
-
 ## API
 
 gubb exports two functions: [`test`](#test) and [`assert`](#assert).
 
 ### `test`
 
+--
 The `test` function is used to group assertions into a test.
 
 Syntax: `test(testName: String, testFunction: Function)`
@@ -64,8 +112,8 @@ Syntax: `test(testName: String, testFunction: Function)`
 **Example:**
 
 ```javascript
-test("myFunction", () => {
-   // Assertions go here
+test('myFunction', () => {
+  // Assertions go here
 });
 ```
 
@@ -78,12 +126,13 @@ Syntax: `assert(description: String, conditionFunction: Function)`
 `assert` takes two parameters: a description and a condition function.
 
 **Example:**
+
 ```javascript
-test("isNotFriday", () => {
-   assert(() => {
-     const isFriday = new Date().getDay() === 5;
-     return isFriday
-   });
+test('isNotFriday', () => {
+  assert(() => {
+    const isFriday = new Date().getDay() === 5;
+    return isFriday;
+  });
 });
 ```
 
