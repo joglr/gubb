@@ -66,3 +66,8 @@ describe('assert', () => {
     expect(mockFn).toHaveBeenCalled();
   });
 });
+
+import('./../example/basic/test.js');
+// import('./../example/esm/test.js');
+it.todo('add integration test for esm build');
+import('./../example/multiple-files/test.js');

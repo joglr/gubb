@@ -13,13 +13,8 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "npm run test-unit && npm run test-integration",
-    "test-unit": "cross-env CI=true tsdx test",
-    "test-integration": "npm run test-integration-esm && npm run test-integration-basic && npm run test-integration-multiple-files",
-    "test-integration-esm": "npm run --prefix example/esm test",
-    "test-integration-basic": "npm run --prefix example/basic test",
-    "test-integration-multiple-files": "npm run --prefix example/multiple-files test",
-    "test:watch": "nodemon --exec npm run test",
+    "test": "cross-env CI=true tsdx test",
+    "test:watch": "tsdx test --watchAll",
     "lint": "tsdx lint",
     "release": "np",
     "version": "npm run build"

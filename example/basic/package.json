@@ -1,9 +1,0 @@
-{
-  "name": "gubb-example-node-10",
-  "scripts": {
-    "test": "node test.js"
-  },
-  "dependencies": {
-    "gubb": "./../.."
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "name": "gubb-example-esm",
-  "scripts": {
-    "test": "node -r esm test.js"
-  },
-  "dependencies": {
-    "gubb": "./../.."
-  }
-}
