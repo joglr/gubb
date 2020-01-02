@@ -50,25 +50,46 @@ const { test, assert } = require('gubb');
 // Tests go here
 ```
 
+
 ## API
 
 gubb exports two functions: [`test`](#test) and [`assert`](#assert).
 
-### `test()`
+### `test`
 
-The `test` function is used to group assertions into a test, while `assert` is used to make assertions.
+The `test` function is used to group assertions into a test.
 
-`test(testName, testFunction)`
+Syntax: `test(testName: String, testFunction: Function)`
 
-### `assert()`
+**Example:**
+
+```javascript
+test("myFunction", () => {
+   // Assertions go here
+});
+```
+
+### `assert`
 
 `assert` is used to make assertions.
+
+Syntax: `assert(description: String, conditionFunction: Function)`
+
 `assert` takes two parameters: a description and a condition function.
+
+**Example:**
+```javascript
+test("isNotFriday", () => {
+   assert(() => {
+     const isFriday = new Date().getDay() === 5;
+     return isFriday
+   });
+});
+```
+
 The condition function is the function that tests your code.
 In here, you add logic that assures that your code runs properly.
-This function should a boolean, whether the test passed. Alternatively, if the function throws an error, the test is considered failed. If you want to throw inside this function, remember to use a `try/catch` block, to prevent the error from failing the whole test.
-
-`assert(description, conditionFunction)`
+This function should return a boolean, whether the test passed. Alternatively, if the function throws an error, the test is considered failed. If you want to throw inside this function, remember to use a `try/catch` block, to prevent the error from failing the whole test.
 
 # Contributing
 
