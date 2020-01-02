@@ -1,4 +1,4 @@
-const { test, assert } = require('gubb');
+const { test, assert } = require('./../../');
 
 test('test 1', () => {
   assert('yay', () => true);
