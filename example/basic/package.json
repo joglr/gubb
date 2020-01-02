@@ -1,5 +1,5 @@
 {
-  "name": "gubb-example-multiple-files",
+  "name": "gubb-example-node-10",
   "scripts": {
     "test": "node test.js"
   },
