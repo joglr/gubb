@@ -32,7 +32,7 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.25",
+    "@types/jest": "^25.1.1",
     "esm": "^3.2.25",
     "husky": "^4.0.10",
     "nodemon": "^2.0.2",
