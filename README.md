@@ -14,7 +14,7 @@ npm install gubb --save-dev
 
 ### Defining your tests
 
-To get started, add your first test file to the project. A test file is a javascript file, containing calls to [`test`](#test) and `assert`](#assert). In this example, the file [`test.js`](example/esm/test.js) is added to the root of the project.
+To get started, add your first test file to the project. A test file is a javascript file, containing calls to [`test`](#test) and [`assert`](#assert). In this example, the file [`test.js`](example/esm/test.js) is added to the root of the project.
 
 #### [With ESM](example/esm) (recommended)
 
