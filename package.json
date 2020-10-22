@@ -1,6 +1,6 @@
 {
   "name": "gubb",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "license": "MIT",
   "author": "Jonas Røssum",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "cross-env CI=true tsdx test",
+    "test": "npx cross-env CI=true tsdx test",
     "test:watch": "tsdx test --watchAll",
     "lint": "tsdx lint",
     "release": "np",
@@ -32,19 +32,19 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
-    "@types/jest": "^25.1.1",
+    "@types/jest": "^26.0.15",
     "esm": "^3.2.25",
-    "husky": "^4.0.10",
-    "nodemon": "^2.0.2",
-    "np": "^5.2.1",
-    "tsdx": "^0.12.1",
-    "tslib": "^1.10.0",
-    "typescript": "^3.7.4"
+    "husky": "^4.3.0",
+    "nodemon": "^2.0.6",
+    "np": "^6.5.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.3"
   },
   "dependencies": {
     "boxen": "^4.2.0",
     "cardinal": "^2.1.1",
-    "chalk": "^3.0.0"
+    "chalk": "^4.1.0"
   },
   "description": "gubb is a very minimalistic testing library.",
   "directories": {
