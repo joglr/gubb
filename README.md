@@ -18,7 +18,7 @@ To get started, add your first test file to the project. A test file is a javasc
 
 #### [With ESM](example/esm) (recommended)
 
-If you use the [`esm`](https://www.npmjs.com/package/esm) package or node version 12 or later, you can import the named exports of gubb like so:
+Import the named exports of gubb like so:
 
 ```javascript
 import { test, assert } from 'gubb';
@@ -53,7 +53,7 @@ To run your test, add a `test` entry to the scripts section of your `package.jso
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "node -r esm test.js"
+    "test": "node test.js"
   },
   "devDependencies": {
     "esm": "*"
@@ -61,23 +61,11 @@ To run your test, add a `test` entry to the scripts section of your `package.jso
 }
 ```
 
-_For node version 12 or later, use this instead:_
+Now you can run your test suite on the command-line or in [CI](https://en.wikipedia.org/wiki/Continuous_integration) with
 
-```json
-{
-  "name": "my-package",
-
-  ...
-  "type": "module",
-  "scripts": {
-    "test": "node --experimental-modules test.js"
-  }
-}
 ```
-
-Now you can run your test suite on the commandline or in [CI](https://en.wikipedia.org/wiki/Continuous_integration) with
-
 npm test
+```
 
 ### [Node](example/node) with --experimental-modules flag
 
@@ -138,7 +126,7 @@ test('isNotFriday', () => {
 
 The condition function is the function that tests your code.
 In here, you add logic that assures that your code runs properly.
-This function should return a boolean, whether the test passed. Alternatively, if the function throws an error, the test is considered failed. If you want to throw inside this function, remember to use a `try/catch` block, to prevent the error from failing the whole test.
+This function should return a boolean, whether the test passed. Alternatively, if the function throws an error, the test is considered failed. If you want to throw inside this function without failing the test, use a `try/catch` block.
 
 # Contributing
 
