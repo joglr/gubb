@@ -1,6 +1,6 @@
 {
   "name": "gubb",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "license": "MIT",
   "author": "Jonas Røssum",
   "main": "dist/index.js",
