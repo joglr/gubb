@@ -2,7 +2,7 @@ const exit = () => process.exit(1);
 
 export function runTests(r, paths) {
   console.clear();
-  paths.forEach(path => {
+  paths.forEach((path) => {
     r(path);
   });
 }
@@ -17,8 +17,7 @@ export function runTests(r, paths) {
 // };
 
 export const test = (name, fn) => {
-  global.console.log(
-    name
+  global.console.log(name);
   fn();
 };
 
@@ -41,14 +40,14 @@ export const assert = (desc, cond, exitFn?) => {
     const [, , lineNumber] = line.split(':');
 
     global.console.log(
-        indent(
-          reindent(cond.toString()),
-          (line, n) =>
-            ` ${
-              chalk.blue(Number(lineNumber) + n)
-              // + lineNumber
-            } ${chalk.grey('│')} ${cardinal.highlight(line)}`
-        )
+      indent(
+        reindent(cond.toString()),
+        (line, n) =>
+          ` ${
+            chalk.blue(Number(lineNumber) + n)
+            // + lineNumber
+          } ${chalk.grey('│')} ${cardinal.highlight(line)}`
+      )
     );
     const [line1, , line2] = stackLines
       ? stackLines.slice(2, stackLines.length - 6)
@@ -69,14 +68,14 @@ function reindent(text) {
   let indentationToRemove = Infinity;
   const lines = text.split('\n');
   const [firstLine, ...rest] = lines;
-  rest.forEach(line => {
+  rest.forEach((line) => {
     const indentation = line.length - line.trimStart().length;
     if (indentation < indentationToRemove) indentationToRemove = indentation;
   });
 
   return [
     firstLine.trimStart(),
-    ...rest.map(line => line.substring(indentationToRemove)),
+    ...rest.map((line) => line.substring(indentationToRemove)),
   ].join('\n');
 }
 
